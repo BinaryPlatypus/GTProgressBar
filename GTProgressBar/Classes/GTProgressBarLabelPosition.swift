@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public enum GTProgressBarLabelPosition: Int {
     case left

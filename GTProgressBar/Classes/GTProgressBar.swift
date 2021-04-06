@@ -355,7 +355,20 @@ public class GTProgressBar: UIView {
             }
         }
     }
-
-
 }
 
+extension GTProgressBar {
+    /// A utility function which accepts progress value in Double
+    /// - Parameters:
+    ///   - progress: progress in Double
+    ///   - completion: block called after completion of progress
+    public func animateTo(progress: Double, completion: (() -> Void)? = nil) {
+        animateTo(progress: CGFloat(progress), completion: completion)
+    }
+
+    /// Performs type casting to set a CGFloat from Double
+    /// - Parameter progress: progress to be set, in double
+    public func set(progress: Double) {
+        self.progress = CGFloat(progress)
+    }
+}
